@@ -17,11 +17,11 @@ const ProfilePage = () => {
       setIsLoading(true);
       try {
         // Fetch employee details
-        const employeeResponse = await axios.get(`http://localhost:5000/employee/details/${empId}`);
+        const employeeResponse = await axios.get(`https://emp-1bhc.onrender.com/employee/details/${empId}`);
         setEmployeeDetails(employeeResponse.data);
 
         // Fetch employee tasks
-        const tasksResponse = await axios.get(`http://localhost:5000/employee/tasks/${empId}`);
+        const tasksResponse = await axios.get(`https://emp-1bhc.onrender.com/employee/tasks/${empId}`);
         setEmployeeTasks(tasksResponse.data);
         
         setNoTasks(tasksResponse.data.length === 0);
@@ -42,7 +42,7 @@ const ProfilePage = () => {
     const confirmMarkCompleted = window.confirm('Are you sure you want to mark this task as completed?');
     if (confirmMarkCompleted) {
       try {
-        await axios.put(`http://localhost:5000/tasks/${taskId}`, { is_completed: true });
+        await axios.put(`https://emp-1bhc.onrender.com/tasks/${taskId}`, { is_completed: true });
         const updatedTasks = employeeTasks.map(task => task.id === taskId ? { ...task, is_completed: true } : task);
         setEmployeeTasks(updatedTasks);
       } catch (error) {

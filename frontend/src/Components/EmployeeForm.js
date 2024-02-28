@@ -35,7 +35,7 @@ const EmployeeForm = () => {
     // If there are no errors, submit the form
     if (Object.keys(newErrors).length === 0) {
       try {
-        await axios.post('http://localhost:5000/api/employees', formData);
+        await axios.post('https://emp-1bhc.onrender.com/api/employees', formData);
         alert('Employee added successfully!');
         // Clear form fields after successful submission
         setFormData({

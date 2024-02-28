@@ -12,7 +12,7 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/admin/login', {
+      const response = await axios.post('https://emp-1bhc.onrender.com/admin/login', {
         username,
         password
       });

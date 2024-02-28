@@ -13,7 +13,7 @@ const EmployeeLogin = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/employee/login', { employeeId, password });
+      const response = await axios.post('https://emp-1bhc.onrender.com/employee/login', { employeeId, password });
       // Assuming backend responds with a token or user object upon successful login
       // Redirect user to dashboard or another page
       setEmpId(employeeId);

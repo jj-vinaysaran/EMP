@@ -17,7 +17,7 @@ const DisplayPage = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/employees', { params: filter });
+      const response = await axios.get('https://emp-1bhc.onrender.com/employees', { params: filter });
       setEmployees(response.data);
       setFilteredEmployees(response.data);
     } catch (error) {

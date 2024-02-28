@@ -13,7 +13,7 @@ const EmployeeTasks = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/tasks');
+      const response = await axios.get('https://emp-1bhc.onrender.com/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -21,7 +21,7 @@ const EmployeeTasks = () => {
   };
 
   const handleTakeTask = async (taskId, departmentReq) => {
-    const response = await axios.get(`http://localhost:5000/${empId}`);
+    const response = await axios.get(`https://emp-1bhc.onrender.com/${empId}`);
     const employeeDepartment = response.data.department;
 
     // Check if the employee's department matches the department required by the task
@@ -31,7 +31,7 @@ const EmployeeTasks = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/tasks/${taskId}`, { taken_emp_id: getCurrentUserId() });
+      await axios.put(`https://emp-1bhc.onrender.com/tasks/${taskId}`, { taken_emp_id: getCurrentUserId() });
       fetchTasks();
     } catch (error) {
       console.error('Error taking task:', error);
