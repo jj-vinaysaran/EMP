@@ -1,0 +1,71 @@
+.task-container {
+  color: #222; /* Text color */
+  margin: 5% auto; /* Center the container with some top margin */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.task-item {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff; /* White background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Title color */
+}
+
+.task-icon {
+  font-size: 24px;
+  margin-left: 5px;
+  color: #555; /* Icon color */
+}
+
+.task-description {
+  margin-bottom: 10px;
+  color: #555; /* Description color */
+}
+
+.task-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-detail-item {
+  margin-bottom: 5px;
+  color: #666; /* Detail item color */
+}
+
+.add-task-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+  background-color: #0056b3; /* Button hover background color */
+}

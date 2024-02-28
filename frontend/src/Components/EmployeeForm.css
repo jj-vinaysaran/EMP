@@ -1,0 +1,92 @@
+/* Form Container */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 10%;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 10px;
+  background-color: #48dbd6; /* Background color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Form Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Heading color */
+}
+
+/* Form Container */
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc; /* Input border color */
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555; /* Text color */
+  background-color: #fff; /* Input background color */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+select {
+  appearance: none; /* Remove default arrow icon in select */
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Radio Button Labels */
+.radio-group label {
+  margin-right: 15px;
+  color: #555; /* Radio label color */
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Button hover background color */
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 90%;
+  }
+}

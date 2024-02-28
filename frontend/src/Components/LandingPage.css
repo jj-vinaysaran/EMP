@@ -1,0 +1,62 @@
+/* Landing Container */
+.landing-container {
+    /* background-image: url('https://wallpaperaccess.com/full/1930779.jpg') ; Replace with your background image */
+    background-repeat: no-repeat;
+  background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent; /* Dark background color */
+    color: #fff; /* Text color */
+  }
+  
+  /* Landing Content */
+  .landing-content {
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  /* Options */
+  .options {
+    margin-top: 30px;
+  }
+  
+  /* Enter Library Link */
+  .home-but {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 30px;
+    border: 2px solid #17a2b8; 
+    border-radius: 8px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff; 
+    background-color: #343a40;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-but {
+    background-color: #117a8b; /* Hover background color */
+    cursor: pointer;
+  }
+  
+  /* Icons */
+  .enter-library i, .admin i {
+    margin-right: 10px;
+    background-color: #117a8b;
+    color:black;
+  }
+  
+  /* Background Image */
+  /* .background-image {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    opacity: 0.2; 
+  }
+   */

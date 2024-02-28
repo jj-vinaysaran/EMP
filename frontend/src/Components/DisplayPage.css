@@ -1,0 +1,105 @@
+/* Styles for the whole page */
+.display-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Text color */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Filter Select */
+.filter-select {
+  width: 200px;
+  height: 40px;
+  border: 2px solid #3498db; /* Border color */
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #333; /* Text color */
+  background-color: #fff; /* Background color */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Filter Input */
+#filter-input {
+  width: 100px;
+  height: 40px;
+  border: 2px solid #3498db; /* Border color */
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #333; /* Text color */
+  background-color: #fff; /* Background color */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Styles for table headings */
+th {
+  background-color: #3498db; /* Blue for headings */
+  color: #fff; /* Text color */
+  padding: 12px;
+  text-align: left;
+}
+
+/* Styles for table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+/* Styles for table cells */
+td {
+  padding: 10px;
+}
+
+/* Styles for table cells containing numbers */
+td.number {
+  text-align: right;
+}
+
+/* Styles for table cells containing dates */
+td.date {
+  text-align: center;
+}
+
+/* Styles for table cells containing gender */
+td.gender {
+  text-transform: capitalize;
+}
+
+/* Styles for table cells containing salary */
+td.salary {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #e0e0e0; /* Lighter gray for hover effect */
+}
+
+/* Button for adding employee */
+.add-employee-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #3498db; /* Blue for button background */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.add-employee-button:hover {
+  background-color: #2980b9; /* Darker blue for hover effect */
+}

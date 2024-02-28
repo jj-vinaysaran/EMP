@@ -1,0 +1,83 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 6%;
+  padding: 20px;
+  background-color: #2c3e50; /* Deep blue background color */
+  color: #fff; /* Text color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7f50; /* Heading color */
+}
+
+.details-container,
+.tasks-container {
+  margin-bottom: 40px;
+}
+
+.details-container {
+  border-bottom: 1px solid #555; /* Separator line */
+  padding-bottom: 20px;
+}
+
+.details-container h3,
+.tasks-container h3 {
+  color: #ff7f50; /* Section heading color */
+}
+
+.details-container p {
+  margin: 10px 0;
+}
+
+.tasks-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tasks-container li {
+  border: 1px solid #ff7f50; /* Task border color */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #333; /* Task background color */
+}
+
+.tasks-container li strong {
+  color: #ff7f50; /* Task title color */
+}
+
+.tasks-container li p {
+  margin: 10px 0;
+}
+
+.no-tasks-message {
+  text-align: center;
+  font-style: italic;
+  color: #aaa; /* Message color */
+}
+
+.view-tasks-button,
+.mark-completed-button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 12px;
+  background-color: #ff7f50; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.view-tasks-button:hover,
+.mark-completed-button:hover {
+  background-color: #cc5500; /* Button hover background color */
+}
