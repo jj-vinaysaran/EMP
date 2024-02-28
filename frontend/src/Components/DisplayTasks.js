@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Paper, Typography, Button } from '@mui/material';
 import axios from 'axios';
-// import './EmployeeTasks.css';
+import './DisplayTasks.css'; // Import CSS file for styling
 import { UserContext } from './UserContext';
-
 
 const EmployeeTasks = () => {
   const [tasks, setTasks] = useState([]);
-  const {empId} = useContext(UserContext);
+  const { empId } = useContext(UserContext);
 
   useEffect(() => {
     fetchTasks();
@@ -32,7 +30,6 @@ const EmployeeTasks = () => {
       return;
     }
 
-
     try {
       await axios.put(`http://localhost:5000/tasks/${taskId}`, { taken_emp_id: getCurrentUserId() });
       fetchTasks();
@@ -47,34 +44,33 @@ const EmployeeTasks = () => {
   };
 
   return (
-    <Container>
-      <h1 style={{color:"white"}}>Available Tasks</h1>
+    <div className="container">
+      <h1 className="heading">Available Tasks</h1>
       <div className="task-container">
         {tasks.map((task) => (
-          <Paper key={task.id} className="task-item">
-            <Typography className="task-title">{task.title}</Typography>
-            <Typography className="task-description">{task.description}</Typography>
+          <div key={task.id} className="task-item">
+            <h2 className="task-title">{task.title}</h2>
+            <p className="task-description">{task.description}</p>
             <div className="task-details">
-              <Typography className="task-detail-item">Department: {task.department_req}</Typography>
-              <Typography className="task-detail-item">Bounty: {task.bounty}</Typography>
-              <Typography className="task-detail-item">Due Date: {task.due_date}</Typography>
+              <p className="task-detail-item">Department: {task.department_req}</p>
+              <p className="task-detail-item">Earning: {task.bounty}</p>
+              <p className="task-detail-item">Deadline: {task.due_date}</p>
               {task.taken_emp_id ? (
-                <Typography className="task-detail-item">Taken By: {task.taken_emp_id}</Typography>
+                <p className="task-detail-item">Taken By: {task.taken_emp_id}</p>
               ) : (
-                <Button
-                  variant="contained"
+                <button
+                  className="take-task-button"
                   disabled={!!task.taken_emp_id}
                   onClick={() => handleTakeTask(task.id, task.department_req)}
-                  className="take-task-button"
                 >
                   Take Task
-                </Button>
+                </button>
               )}
             </div>
-          </Paper>
+          </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 
