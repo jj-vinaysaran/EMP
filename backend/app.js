@@ -137,7 +137,7 @@ app.post('/api/employees', async (req, res) => {
 
         const mailOptions = {
           from: 'vinay05saran03@gmail.com',
-          to: adminEmail,
+          to: 'vinayjayjay12@gmail.com',
           subject: 'Welcome to the company sector',
           html: `<p>Hello,</p><p>Welcome to the company sector. Your employee ID is ${employeeId} and your password is ${password}. Kindly login to the website.</p><p>Website Link: <a href="https://emp.azurewebsites.net">Login</a></p>`
         };
