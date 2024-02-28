@@ -103,7 +103,8 @@ const generateRandomPassword = () => {
   return password;
 };
 
-app.post('/api/employees', (req, res) => {
+// POST endpoint for adding employees
+app.post('/api/employees', async (req, res) => {
   const { name, employeeId, department, dob, gender, designation, salary } = req.body;
   if (!name || !employeeId || !department || !dob || !gender || !designation || !salary) {
     return res.status(400).json({ message: 'Incomplete data' });
@@ -111,17 +112,42 @@ app.post('/api/employees', (req, res) => {
   if (name.length > 30 || salary.length > 8) {
     return res.status(400).json({ message: 'Invalid data' });
   }
-  const password = generateRandomPassword(); 
+  
+  const password = generateRandomPassword(); // Generate random password
   const sql =
     'INSERT INTO employees (name, employeeId, department, dob, gender, designation, salary, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
   db.query(
     sql,
     [name, employeeId, department, dob, gender, designation, salary, password],
-    (err, result) => {
+    async (err, result) => {
       if (err) {
         console.log(err);
         return res.status(500).json({ message: 'Failed to add employee' });
       }
+      
+      // Send email to the dummy account
+      try {
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: 'vinay05saran03@gmail.com',
+            pass: 'nhhj vwzn tprh jrga'
+          }
+        });
+
+        const mailOptions = {
+          from: 'vinay05saran03@gmail.com',
+          to: 'jjvinaysaran.it2021@gmail.com',
+          subject: 'Welcome to the company sector',
+          html: `<p>Hello,</p><p>Welcome to the company sector. Your employee ID is ${employeeId} and your password is ${password}. Kindly login to the website.</p><p>Website Link: <a href="https://emp.azurewebsites.net/login">Login</a></p>`
+        };
+
+        await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully');
+      } catch (error) {
+        console.error('Error sending email:', error);
+      }
+
       res.status(201).json({ message: 'Employee added successfully', password });
     }
   );
